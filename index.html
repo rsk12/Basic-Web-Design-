@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+
+        <style type="text/css">
+        	
+        	
+
+        </style>
+
+
+       			
+</head>
+    <body>
+
+      <form action="#" method="post" id="form" name="registration">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" placeholder="John" required>
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" placeholder="john@doe.com" onkeyup="ValidateEmail(); return false;" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+          
+          
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPass(); return false;"  placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+          <span class="confirmMessage" id="confirmMessage"></span>
+          
+          
+          <label for="mobile">Mobile:</label>
+          <input type="mobile" id="mobile" name="user_mobile" required>
+            
+          <label for="age">Age</label>
+          <input type="number" id="age" name="user_age" required>
+                      
+          <label>Gender</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Male</label><br>
+          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Female</label>
+            
+          
+            
+        
+        </fieldset>
+        
+      
+        <button type="submit">Sign Up</button>
+      </form>
+      <!-- value="submit" name="submit" -->
+ 		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript">
+    	$(function () {
+        $("#btnSubmit").click(function () {
+            var password = $("#password").val();
+            var confirmPassword = $("#confirm_password").val();
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        	});
+    	});
+		</script> this script is regarding appearing dialog box --> 
+		
+		<script type="text/javascript">
+			function checkPass(){
+			var password = document.getElementById("password");
+			var confirmPassword= document.getElementById("confirm_password");
+
+			var message = document.getElementById("confirmMessage");
+
+			var goodColor = "#66cc66";
+			var badColor = "#ff6666";
+
+			if(password.value ==  confirmPassword.value)
+			{
+				confirmPassword.style.backgroundColor = goodColor;
+				message.innerHTML = "Passwords Match!"
+			}
+			else{
+				confirmPassword.style.backgroundColor = badColor;
+				message.style.color = badColor;
+				messase.innerHTML= "Passwords Do Not Match!"
+			}
+
+
+
+					function ValidateEmail(mail)   
+					{  
+					 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
+					  {  
+					    return (true)  
+					  }  
+					    alert("You have entered an invalid email address!")  
+					    return (false)  
+					}  
+
+
+
+		}
+	</script>
+
+
+	
+
+		
+
+	</body>
+
+</html>
